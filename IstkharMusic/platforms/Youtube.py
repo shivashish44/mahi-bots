@@ -66,7 +66,7 @@ def cookie_txt_file():
 
 # ---------- API SETUP ----------
 
-async def _download_media(link: str, kind: str, exts: list[str], wait: int = 60):
+async def _download_media(link: str, kind: str, exts: list[str], wait: int = 100):
     vid = link.split("v=")[-1].split("&")[0]
     os.makedirs("downloads", exist_ok=True)
     for ext in exts:
