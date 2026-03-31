@@ -22,7 +22,7 @@ ASSUSERNAME = getenv("ASSUSERNAME")
 
 # ======================================================
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-LOGGER_ID = int(getenv("LOGGER_ID", -1002875690501))
+LOGGER_ID = int(getenv("LOGGER_ID", -1003565819974))
 
 BASE_URL = getenv("API_URL", 'https://BabyAPI.Pro') 
 API_KEY = getenv('API_KEY', 'ADMINBABYX169B154E676F6977C17AF01CACE030D3') 
