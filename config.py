@@ -8,24 +8,24 @@ from pyrogram import filters
 
 load_dotenv()
 
-# ======================================================
-API_ID = int(getenv("API_ID", "24168862"))
-API_HASH = getenv("API_HASH", "916a9424dd1e58ab7955001ccc0172b3")
+# -----------------------------------------------------
+API_ID = int(getenv("API_ID", None))
+API_HASH = getenv("API_HASH", None)
 BOT_TOKEN = getenv("BOT_TOKEN", None)
-
-# ======================================================
-OWNER_ID = int(getenv("OWNER_ID", 7980630836))
-OWNER_USERNAME = getenv("OWNER_USERNAME", "Itzz_Istkhar")
-BOT_USERNAME = getenv("BOT_USERNAME", "Sukku_Music_Bot")
-BOT_NAME = getenv("BOT_NAME", "Sonali Music")
-ASSUSERNAME = getenv("ASSUSERNAME")
-
-# ======================================================
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-LOGGER_ID = int(getenv("LOGGER_ID", -1003565819974))
+OWNER_USERNAME = getenv("OWNER_USERNAME","@SUKOON_S")
+BOT_USERNAME = getenv("BOT_USERNAME" , "aaru_beatsbot")
+BOT_NAME = getenv("BOT_NAME" , "╼⃝𖠁♫─ᴀᴀʀᴜ Qᴜᴇᴇɴ─♫𖠁⃝╾")
+ASSUSERNAME = getenv("ASSUSERNAME" , "╼⃝𖠁♫─ᴀᴀʀᴜ Qᴜᴇᴇɴ─♫𖠁⃝╾")
+# ---------------------------------------------------------
+# ---------------------------------------------------------
+MONGO_DB_URI = getenv(
+    "MONGO_DB_URI",
+    "mongodb+srv://shivbots:shivashish@cluster0.kdzu3eg.mongodb.net/?appName=Cluster0"
+)
+LOGGER_ID = int(getenv("LOGGER_ID", -1003812209413))
 
 BASE_URL = getenv("API_URL", 'https://BabyAPI.Pro') 
-API_KEY = getenv('API_KEY', 'ADMINBABYX169B154E676F6977C17AF01CACE030D3') 
+API_KEY = getenv('API_KEY', 'BABYXF275C7DDEEC1631109C791020A2DDABC9') 
 # ======================================================
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "9999999"))
@@ -43,14 +43,16 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 # ======================================================
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/istu56/InflexMusic")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://i.ibb.co/Lz4WxZnF/8418584090-29223.jpg  ")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-# ======================================================
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/IamIstkhar")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/THUNDERDEVS")
-
+# -------------------------------------------------------------------------
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/betabot_hub")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/betabot_support")
+SOURCE = getenv("SOURCE", "https://preet_deal+bot")
+CHAT = getenv("CHAT", "https://t.me/betabot_support")
+# --------------------------------------------------------------------------------
 # ======================================================
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "1c21247d714244ddbb09925dac565aed")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "709e1a2969664491b58200860623ef19")
@@ -65,20 +67,22 @@ STRING6 = getenv("STRING_SESSION6", None)
 STRING7 = getenv("STRING_SESSION7", None)
 
 # ======================================================
-START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/x5lytj.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/leaexg.jpg")
-
-PLAYLIST_IMG_URL = "https://files.catbox.moe/b0e4vk.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/psya34.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/4dzp6n.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/4dzp6n.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/4dzp6n.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/4dzp6n.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/2y5o3g.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/2y5o3g.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
-
+START_IMG_URL = getenv(
+    "START_IMG_URL", "https://files.catbox.moe/umpv9j.jpg"
+)
+PING_IMG_URL = getenv(
+    "PING_IMG_URL", "https://files.catbox.moe/lnvimv.jpg"
+)
+PLAYLIST_IMG_URL = "https://files.catbox.moe/ho0744.png"
+STATS_IMG_URL = "https://files.catbox.moe/ho0744.png"
+TELEGRAM_AUDIO_URL = "https://files.catbox.moe/ho0744.png"
+TELEGRAM_VIDEO_URL = "https://files.catbox.moe/ay13ih.png"
+STREAM_IMG_URL = "https://files.catbox.moe/ay13ih.png"
+SOUNCLOUD_IMG_URL = "https://files.catbox.moe/ay13ih.png"
+YOUTUBE_IMG_URL = "https://files.catbox.moe/ay13ih.png"
+SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/umpv9j.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/umpv9j.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/umpv9j.jpg"
 # ======================================================
 BANNED_USERS = filters.user()
 adminlist = {}
