@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message, CallbackQuery
 
-from IstkharMusic import YouTube, app
-from IstkharMusic.core.call import Istu as Anony
-from IstkharMusic.misc import db, SUDOERS
-from IstkharMusic.utils import AdminRightsCheck, seconds_to_min
-from IstkharMusic.utils.inline import close_markup
+from MahiMusic import YouTube, app
+from MahiMusic.core.call import Aaru as Anony
+from MahiMusic.misc import db, SUDOERS
+from MahiMusic.utils import AdminRightsCheck, seconds_to_min
+from MahiMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 @app.on_message(
