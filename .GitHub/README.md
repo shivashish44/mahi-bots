@@ -1,126 +1,112 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>
-</p>
-
 <h2 align="center">
-    ───「 sᴜᴋᴋᴜ ᴍᴜsɪᴄ 」───
+    ──「 ♫─ᴀᴀʀᴜ Qᴜᴇᴇɴ─♫ 」──
 </h2>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://readme-typing-svg.herokuapp.com?color=FF0085&width=620&lines=🍁+🚩+𝗣𝗢𝗪𝗘𝗥𝗘𝗗+𝗕𝗬+BETA+BOT+HUB+🚩+🍁"></b></h3>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<h1 align="center"><b>Beta𝐁ᴏᴛHub</b></h1>
+<p align="center"><a href="https://sukoon_s"><img src="https://files.catbox.moe/nrt3hr.jpg" width="400"></a></p>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
 </p>
 
-<p align="center">
-  <img src="https://files.catbox.moe/971v6c.jpg">
-</p>
 
-<p align="center">
-<b>𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</b>
-</p>
 
-<h2 align="center"> ─「 ᴅᴇᴘʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─ </h2>
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=spotify-music&type=git&repository=BABY-MUSIC%2FSPOTIFY_MUSIC&branch=main&builder=dockerfile)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>
-</p>
 
-<p align="center">
-  <a href="https://dashboard.heroku.com/new?template=https://github.com/istu56/InflexMusic">
-    <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-8A2BE2?style=for-the-badge&logo=heroku" width="230" height="40"/>
-  </a>
-</p>
+## 🚀 Deploy on Heroku 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/BABY-MUSIC/SPOTIFY_MUSIC)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>
-</p>
 
-<h1 align="center">─「 ǫᴜɪᴄᴋ sᴇᴛᴜᴘ 」─</h1>
+<details>
+  <summary>### 🔧 Quick Setup</summary>
+<h1>bash run</h1>
 
- 1. **🔧 ᴜᴘᴅᴀᴛᴇ & ᴜᴘɢʀᴀᴅᴇ**
+---
+
+1. **Upgrade & Update:**
    ```bash
    sudo apt-get update && sudo apt-get upgrade -y
    ```
 
- 2. **📦 ɪɴsᴛᴀʟʟ ʀᴇǫᴜɪʀᴇᴅ ᴘᴀᴄᴋᴀɢᴇs**
+2. **Install Required Packages:**
    ```bash
    sudo apt-get install python3-pip ffmpeg -y
    ```
- 4. **📌 sᴇᴛᴛɪɴɢ ᴜᴘ ᴘɪᴘ**
+3. **Setting up PIP**
    ```bash
    sudo pip3 install -U pip
    ```
- 5. **⚡ ɪɴsᴛᴀʟʟɪɴɢ ɴᴏᴅᴇ**
+4. **Installing Node**
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && source ~/.bashrc && nvm install v18
    ```
- 6. **📥 ᴄʟᴏɴᴇ ᴛʜᴇ ʀᴇᴘᴏsɪᴛᴏʀʏ**
+5. **Clone the Repository**
    ```bash
-   git clone https://github.com/ITZ-VAMPIRE07/VAMPIRE-MUSIC && cd VAMPIRE-MUSIC
+   git clone https://github.com/BABY-MUSIC/SPOTIFY_MUSIC && cd SPOTIFY_MUSIC
    ```
- 7. **📂 ɪɴsᴛᴀʟʟ ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs**
+6. **Install Requirements**
    ```bash
    pip3 install -U -r requirements.txt
    ```
- 8. **📝 ᴄʀᴇᴀᴛᴇ .env ᴡɪᴛʜ sᴀᴍᴘʟᴇ.env**
+7. **Create .env  with sample.env**
    ```bash
    cp sample.env .env
    ```
    - Edit .env with your vars
- 9. **✏️ ᴇᴅɪᴛɪɴɢ ᴠᴀʀs**
+8. **Editing Vars:**
    ```bash
    vi .env
    ```
    - Edit .env with your values.
    - Press `I` button on keyboard to start editing.
    - Press `Ctrl + C`  once you are done with editing vars and type `:wq` to save .env or `:qa` to exit editing.
-10. **🔗 ɪɴsᴛᴀʟʟɪɴɢ ᴛᴍᴜx**
+9. **Installing tmux**
     ```bash
     sudo apt install tmux -y && tmux
     ```
-11. **🚀 ʀᴜɴ ᴛʜᴇ ʙᴏᴛ**
+10. **Run the Bot**
     ```bash
     bash start
     ```
 
+---
+</details>
+
+
+### 🛠 Commands & Usage
+
+
+| Command                 | Description                                 |
+|-------------------------|---------------------------------------------|
+| `/play <song name>`     | Play the requested song.                    |
+| `/pause`                | Pause the currently playing song.           |
+| `/resume`               | Resume the paused song.                     |
+| `/skip`                 | Move to the next song in the queue.         |
+| `/stop`                 | Stop the bot and clear the queue.           |
+| `/queue`                | Display the list of songs in the queue.     |
+
+For a full list of commands, use `/help` in [telegram](https://t.me/betabot_hub).
+
+---
+━━━━━━━━━━━━━━━━━━━━
+
+<h3 align="center">
+    ─「 sᴜᴩᴩᴏʀᴛ 」─
+</h3>
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>
+<a href="https://t.me/BETABOT_SUPPORT"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
-<h1 align="center">─「 ©️ ʟɪᴄᴇɴsᴇ ɴᴏᴛᴇ 」─</h1>
-
-<p>©️ 2025-26 ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ ʙʏ <strong>ᴘᴜʀᴠɪ ʙᴏᴛs (<a href="https://github.com/Im-NotCoder">Im-Notcoder</a>)</strong> 🚀</p>
-
-<p>• ᴛʜɪs <a href="https://github.com/Im-NotCoder/Purvi-V2">sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ</a> ɪs ʀᴇʟᴇᴀsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ <strong><a href="https://github.com/Im-NotCoder/Purvi-V2/blob/main/LICENSE">MIT LICENSE</a></strong> 📜</p>
-
-<p>• ᴜɴᴀᴜᴛʜᴏʀɪᴢᴇᴅ ғᴏʀᴋɪɴɢ, ɪᴍᴘᴏʀᴛɪɴɢ, ᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴄᴏᴅᴇ ᴡɪᴛʜᴏᴜᴛ ᴘʀᴏᴘᴇʀ ᴄʀᴇᴅɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ ʟᴇɢᴀʟ ᴀᴄᴛɪᴏɴ ⚠️.</p>
-
-<p align="center">  
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>  
-</p>  
-
-<h1 align="center">─「 ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ 」─</h1>  
-
-<p align="center">  
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>  
-</p>  
-
-<p align="center">  
-  <!-- Dev -->  
-  <a href="https://t.me/TheSigmaCoder">  
-    <img src="https://img.shields.io/badge/ᴅᴇᴠ-ᴀʟᴘʜᴀ-ff9800?style=for-the-badge&logo=telegram&logoColor=white"/> 
-  </a>  
-
-  <!-- Purvi Bots -->    
-  <a href="https://t.me/purvi_bots">  
-    <img src="https://img.shields.io/badge/ᴘᴜʀᴠ𝙸-%20ʙᴏᴛs-2196f3?style=for-the-badge&logo=telegram&logoColor=white"/> 
-  </a>  
-
-  <!-- Instagram -->    
-  <a href="https://instagram.com/careless__02">  
-    <img src="https://img.shields.io/badge/𝙸ɴѕᴛᴀɢʀᴀᴍ-d62976?style=for-the-badge&logo=instagram&logoColor=white"/>  
-  </a>  
-</p>  
-
-<p align="center">  
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>  
+<p align="center">
+<a href="https://t.me/BETABOT_HUB"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
+
+### Contact :
+<a href="https://t.me/SUKOON_S"><img title="Telegram" src="https://img.shields.io/badge/Telegram-%23000000.svg?&style=for-the-badge&logo=telegram&logoColor=61DAFB"></a>
+
+<a href="https://instagram.com/shivashish.kr"><img title="Instagram" src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white"></a>
