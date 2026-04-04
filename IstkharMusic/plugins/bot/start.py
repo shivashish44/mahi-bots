@@ -8,12 +8,12 @@ from py_yt import VideosSearch
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 import config
-from IstkharMusic import app
-from IstkharMusic.misc import _boot_
-from IstkharMusic.plugins.sudo.sudoers import sudoers_list
-from IstkharMusic.utils.database import get_served_chats, get_served_users, get_sudoers
-from IstkharMusic.utils import bot_sys_stats
-from IstkharMusic.utils.database import (
+from MahiMusic import app
+from MahiMusic.misc import _boot_
+from MahiMusic.plugins.sudo.sudoers import sudoers_list
+from MahiMusic.utils.database import get_served_chats, get_served_users, get_sudoers
+from MahiMusic.utils import bot_sys_stats
+from MahiMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -21,9 +21,9 @@ from IstkharMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from IstkharMusic.utils.decorators.language import LanguageStart
-from IstkharMusic.utils.formatters import get_readable_time
-from IstkharMusic.utils.inline import help_pannel, private_panel, start_panel
+from MahiMusic.utils.decorators.language import LanguageStart
+from MahiMusic.utils.formatters import get_readable_time
+from MahiMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
@@ -52,7 +52,7 @@ NEXI_VID = [
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
 
-    typing_message = await message.reply("<b> Isᴛᴋʜᴀʀ..Bᴏᴛs..❤️‍🔥</b>")
+    typing_message = await message.reply("<b> BETA..Bᴏᴛs..❤️‍🔥</b>")
     
     
     typing_text = "<b>𝖲ᴛᴀʀᴛɪɴɢ...❤️‍🔥</b>"
@@ -202,7 +202,7 @@ async def welcome(client, message: Message):
             print(ex)
 
 # ===========================================================
-# ©️ 2025-26 All Rights Reserved by Team Istu (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Team BETA (Im-Notcoder) 😎
 # 
 # 🧑‍💻 Developer : t.me/MrIstutg
 # 🔗 Source link : t.me/Istuxsupport
