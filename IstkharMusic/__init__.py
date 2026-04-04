@@ -1,8 +1,8 @@
-from IstkharMusic.core.bot import Istu
-from IstkharMusic.core.dir import dirr
-from IstkharMusic.core.git import git
-from IstkharMusic.core.userbot import Userbot
-from IstkharMusic.misc import dbb, heroku
+from MahiMusic.core.bot import Aaru
+from MahiMusic.core.dir import dirr
+from MahiMusic.core.git import git
+from MahiMusic.core.userbot import Userbot
+from MahiMusic.misc import dbb, heroku
 from .logging import LOGGER
 
 dirr()
