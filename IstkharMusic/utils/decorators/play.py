@@ -8,9 +8,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from IstkharMusic import YouTube, app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import (
+from MahiMusic import YouTube, app
+from MahiMusic.misc import SUDOERS
+from MahiMusic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -19,7 +19,7 @@ from IstkharMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from IstkharMusic.utils.inline import botplaylist_markup
+from MahiMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
 
