@@ -4,15 +4,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from IstkharMusic import Carbon, YouTube, app
-from IstkharMusic.core.call import Istu as Sona
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import add_active_video_chat, is_active_chat
-from IstkharMusic.utils.exceptions import AssistantErr
-from IstkharMusic.utils.inline import aq_markup, close_markup, stream_markup
-from IstkharMusic.utils.pastebin import IstuBin as SonaBin
-from IstkharMusic.utils.stream.queue import put_queue, put_queue_index
-from IstkharMusic.utils.thumbnails import get_thumb
+from MahiMusic import Carbon, YouTube, app
+from MahiMusic.core.call import Istu as Sona
+from MahiMusic.misc import db
+from MahiMusic.utils.database import add_active_video_chat, is_active_chat
+from MahiMusic.utils.exceptions import AssistantErr
+from MahiMusic.utils.inline import aq_markup, close_markup, stream_markup
+from MahiMusic.utils.pastebin import IstuBin as SonaBin
+from MahiMusic.utils.stream.queue import put_queue, put_queue_index
+from MahiMusic.utils.thumbnails import get_thumb
 
 
 
