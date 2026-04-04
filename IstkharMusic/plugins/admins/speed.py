@@ -1,13 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.core.call import Istu
-from IstkharMusic.misc import SUDOERS, db
-from IstkharMusic.utils import AdminRightsCheck
-from IstkharMusic.utils.database import is_active_chat, is_nonadmin_chat
-from IstkharMusic.utils.decorators.language import languageCB
-from IstkharMusic.utils.inline import close_markup, speed_markup
+from MahiMusic import app
+from MahiMusic.core.call import Istu
+from MahiMusic.misc import SUDOERS, db
+from MahiMusic.utils import AdminRightsCheck
+from MahiMusic.utils.database import is_active_chat, is_nonadmin_chat
+from MahiMusic.utils.decorators.language import languageCB
+from MahiMusic.utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 
 checker = []
