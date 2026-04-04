@@ -2,10 +2,10 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
-from IstkharMusic import YouTube, app
-from IstkharMusic.core.call import Istu
-from IstkharMusic.misc import SUDOERS, db
-from IstkharMusic.utils.database import (
+from MahiMusic import YouTube, app
+from MahiMusic.core.call import Istu
+from MahiMusic.misc import SUDOERS, db
+from MahiMusic.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -22,12 +22,12 @@ from pyrogram.errors import (
     UserAlreadyParticipant,
     UserNotParticipant,
 )
-from IstkharMusic.utils.database import get_assistant
-from IstkharMusic.utils.decorators.language import languageCB
-from IstkharMusic.utils.formatters import seconds_to_min
-from IstkharMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
-from IstkharMusic.utils.stream.autoclear import auto_clean
-from IstkharMusic.utils.thumbnails import get_thumb
+from MahiMusic.utils.database import get_assistant
+from MahiMusic.utils.decorators.language import languageCB
+from MahiMusic.utils.formatters import seconds_to_min
+from MahiMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
+from MahiMusic.utils.stream.autoclear import auto_clean
+from MahiMusic.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
@@ -200,7 +200,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         reply_markup=close_markup(_),
                     )
                     try:
-                        return await Istu.stop_stream(chat_id)
+                        return await Aaru.stop_stream(chat_id)
                     except:
                         return
             except:
@@ -214,7 +214,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         ),
                         reply_markup=close_markup(_),
                     )
-                    return await Istu.stop_stream(chat_id)
+                    return await Aaru.stop_stream(chat_id)
                 except:
                     return
         else:
@@ -326,7 +326,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     image = None
             try:
-                await Istu.skip_stream(chat_id, queued, video=status, image=image)
+                await Aaru.skip_stream(chat_id, queued, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             if videoid == "telegram":
