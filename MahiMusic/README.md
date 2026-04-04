@@ -1,1 +1,1 @@
-# Directory contents from IstkharMusic should be placed here.
+# Directory contents from MAHIMusic should be placed here.
