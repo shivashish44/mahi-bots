@@ -1,8 +1,8 @@
 import time
 import psutil
 
-from IstkharMusic.misc import _boot_
-from IstkharMusic.utils.formatters import get_readable_time
+from MahiMusic.misc import _boot_
+from MahiMusic.utils.formatters import get_readable_time
 
 
 async def bot_sys_stats():
