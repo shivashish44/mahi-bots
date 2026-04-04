@@ -4,33 +4,30 @@ import random
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message, InputMediaPhoto
 
-from IstkharMusic import app
-from IstkharMusic.utils import help_pannel
-from IstkharMusic.utils.database import get_lang
-from IstkharMusic.utils.decorators.language import LanguageStart, languageCB
-from IstkharMusic.utils.inline.help import help_back_markup, private_help_panel
+from MahiMusic import app
+from MahiMusic.utils import help_pannel
+from MahiMusic.utils.database import get_lang
+from MahiMusic.utils.decorators.language import LanguageStart, languageCB
+from MahiMusic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
-from IstkharMusic.utils.stuffs.buttons import BUTTONS
-from IstkharMusic.utils.stuffs.helper import Helper
+from MahiMusic.utils.stuffs.buttons import BUTTONS
+from MahiMusic.utils.stuffs.helper import Helper
 
 
 START_IMG = [
-    "https://files.catbox.moe/x5lytj.jpg",
-    "https://files.catbox.moe/psya34.jpg",
-    "https://files.catbox.moe/leaexg.jpg",
-    "https://files.catbox.moe/b0e4vk.jpg",
-    "https://files.catbox.moe/1b1wap.jpg",
-    "https://files.catbox.moe/ommjjk.jpg",
-    "https://files.catbox.moe/onurxm.jpg",
-    "https://files.catbox.moe/97v75k.jpg",
-    "https://files.catbox.moe/t833zy.jpg",
-    "https://files.catbox.moe/472piq.jpg",
-    "https://files.catbox.moe/qwjeyk.jpg",
-    "https://files.catbox.moe/t0hopv.jpg",
-    "https://files.catbox.moe/u5ux0j.jpg",
-    "https://files.catbox.moe/h1yk4w.jpg",
-    "https://files.catbox.moe/gl5rg8.jpg",
+   
+    "https://files.catbox.moe/umpv9j.jpg",
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg", 
+    "https://files.catbox.moe/umpv9j.jpg",
 ]
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
