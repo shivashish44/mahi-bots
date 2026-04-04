@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.core.call import Istu
-from IstkharMusic.utils.database import set_loop
-from IstkharMusic.utils.decorators import AdminRightsCheck
-from IstkharMusic.utils.inline import close_markup
+from MahiMusic import app
+from MahiMusic.core.call import Istu
+from MahiMusic.utils.database import set_loop
+from MahiMusic.utils.decorators import AdminRightsCheck
+from MahiMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
