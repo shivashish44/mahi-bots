@@ -1,8 +1,8 @@
 import asyncio
 from typing import Union
 
-from IstkharMusic.misc import db
-from IstkharMusic.utils.formatters import check_duration, seconds_to_min
+from MahiMusic.misc import db
+from MahiMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
 
 
