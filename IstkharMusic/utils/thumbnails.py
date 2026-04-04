@@ -113,9 +113,9 @@ async def get_thumb(videoid):
                 return ImageFont.truetype(path, size)
             except:
                 return ImageFont.load_default()
-        font = safe_font("IstkharMusic/assets/font.ttf", 30)
-        font2 = safe_font("IstkharMusic/assets/font.ttf", 30)
-        arial = safe_font("IstkharMusic/assets/font2.ttf", 30)
+        font = safe_font("MahiMusic/assets/font.ttf", 30)
+        font2 = safe_font("MahiMusic/assets/font.ttf", 30)
+        arial = safe_font("MahiMusic/assets/font2.ttf", 30)
         # Draw text
         draw = ImageDraw.Draw(background)
         # Channel | Views
