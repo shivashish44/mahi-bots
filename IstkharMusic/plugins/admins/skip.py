@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from IstkharMusic import YouTube, app
-from IstkharMusic.core.call import Istu
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import get_loop
-from IstkharMusic.utils.decorators import AdminRightsCheck
-from IstkharMusic.utils.inline import close_markup, stream_markup
-from IstkharMusic.utils.stream.autoclear import auto_clean
-from IstkharMusic.utils.thumbnails import get_thumb
+from MahiMusic import YouTube, app
+from MahiMusic.core.call import Aaur
+from MahiMusic.misc import db
+from MahiMusic.utils.database import get_loop
+from MahiMusic.utils.decorators import AdminRightsCheck
+from MahiMusic.utils.inline import close_markup, stream_markup
+from MahiMusic.utils.stream.autoclear import auto_clean
+from MahiMusic.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
