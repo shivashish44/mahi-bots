@@ -1,5 +1,5 @@
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import get_lang, is_maintenance
+from MahiMusic.misc import SUDOERS
+from MahiMusic.utils.database import get_lang, is_maintenance
 from strings import get_string
 
 
