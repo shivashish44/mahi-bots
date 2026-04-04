@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.utils import extract_user, int_to_alpha
-from IstkharMusic.utils.database import (
+from MahiMusic import app
+from MahiMusic.utils import extract_user, int_to_alpha
+from MahiMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
