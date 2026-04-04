@@ -1,17 +1,24 @@
-FROM nikolaik/python-nodejs:python3.11-nodejs19
+# ---- Base image ----
+FROM python:3.10-slim
 
-RUN rm -f /etc/apt/sources.list.d/yarn.list && \
-    sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list && \
-    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends ffmpeg aria2 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# ---- Set working directory ----
+WORKDIR /app
 
-COPY . /app/
-WORKDIR /app/
+# ---- Copy all project files ----
+COPY . /app
 
-RUN python -m pip install --no-cache-dir --upgrade pip
-RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
+# ---- Install system dependencies ----
+# git = for GitHub packages
+# curl = to install Node.js
+# ffmpeg = required for pytgcalls audio streaming
+RUN apt-get update && apt-get install -y \
+    git curl ffmpeg \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && node -v && npm -v \
+    && pip install --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt \
+    && rm -rf /var/lib/apt/lists/*
 
-CMD bash start
+# ---- Default command ----
+CMD ["bash", "start"]
