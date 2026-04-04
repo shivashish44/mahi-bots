@@ -9,8 +9,8 @@ from MahiMusic.utils.database import (
     get_authuser_names,
     save_authuser,
 )
-from IstkharMusic.utils.decorators import AdminActual, language
-from IstkharMusic.utils.inline import close_markup
+from MahiMusic.utils.decorators import AdminActual, language
+from MahiMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
