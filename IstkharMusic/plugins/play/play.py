@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from IstkharMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from IstkharMusic.core.call import Istu
-from IstkharMusic.utils import seconds_to_min, time_to_seconds
-from IstkharMusic.utils.channelplay import get_channeplayCB
-from IstkharMusic.utils.decorators.language import languageCB
-from IstkharMusic.utils.decorators.play import PlayWrapper
-from IstkharMusic.utils.formatters import formats
-from IstkharMusic.utils.inline import (
+from MahiMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from MahiMusic.core.call import Aaru
+from MahiMusic.utils import seconds_to_min, time_to_seconds
+from MahiMusic.utils.channelplay import get_channeplayCB
+from MahiMusic.utils.decorators.language import languageCB
+from MahiMusic.utils.decorators.play import PlayWrapper
+from MahiMusic.utils.formatters import formats
+from MahiMusic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from IstkharMusic.utils.logger import play_logs
-from IstkharMusic.utils.stream.stream import stream
+from MahiMusic.utils.logger import play_logs
+from MahiMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
