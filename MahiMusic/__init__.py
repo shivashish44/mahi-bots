@@ -1,1 +1,0 @@
-# This is an example content for the new MahiMusic directory.
