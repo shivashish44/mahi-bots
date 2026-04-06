@@ -25,6 +25,9 @@ yt-dlp
 youtube-search
 py-yt-search~=0.5.7
 youtube-search-python
+# ============================================================================
+# SPATIAL AUDIO MODULE (NEW - Added for binaural/Dolby processing)
+# ============================================================================
 httpx>=0.28.1
 opencv-python
 beautifulsoup4
