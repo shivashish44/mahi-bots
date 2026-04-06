@@ -13,9 +13,9 @@ from pytgcalls.types import AudioQuality, VideoQuality
 from pytgcalls.types import MediaStream, ChatUpdate
 import config
 from config import autoclean
-from IstkharMusic import LOGGER, YouTube, app
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import (
+from MahiMusic import LOGGER, YouTube, app
+from MahiMusic.misc import db
+from MahiMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -27,10 +27,10 @@ from IstkharMusic.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from IstkharMusic.utils.exceptions import AssistantErr
-from IstkharMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
-from IstkharMusic.utils.inline.play import stream_markup
-from IstkharMusic.utils.thumbnails import get_thumb
+from MahiMusic.utils.exceptions import AssistantErr
+from MahiMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from MahiMusic.utils.inline.play import stream_markup
+from MahiMusic.utils.thumbnails import get_thumb
 from strings import get_string
 
 autoend = {}
@@ -57,15 +57,15 @@ async def cleanup_all_messages(chat_id: int):
 
 class Call(PyTgCalls):
     def __init__(self):
-        self.userbot1 = Client(name="IstuAss1", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING1))
+        self.userbot1 = Client(name="AaruAss1", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING1))
         self.one = PyTgCalls(self.userbot1, cache_duration=100)
-        self.userbot2 = Client(name="IstuAss2", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING2))
+        self.userbot2 = Client(name="AaruAss2", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING2))
         self.two = PyTgCalls(self.userbot2, cache_duration=100)
-        self.userbot3 = Client(name="IstuAss3", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING3))
+        self.userbot3 = Client(name="AaruAss3", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING3))
         self.three = PyTgCalls(self.userbot3, cache_duration=100)
-        self.userbot4 = Client(name="IstuAss4", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING4))
+        self.userbot4 = Client(name="AaruAss4", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING4))
         self.four = PyTgCalls(self.userbot4, cache_duration=100)
-        self.userbot5 = Client(name="IstuAss5", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING5))
+        self.userbot5 = Client(name="AaruAss5", api_id=config.API_ID, api_hash=config.API_HASH, session_string=str(config.STRING5))
         self.five = PyTgCalls(self.userbot5, cache_duration=100)
 
     async def pause_stream(self, chat_id: int):
@@ -223,6 +223,15 @@ class Call(PyTgCalls):
             if users == 1:
                 autoend[chat_id] = datetime.now() + timedelta(minutes=1)
 
+    async def _clear_(chat_id: int) -> None:
+    popped = db.pop(chat_id, None)
+    if popped:
+        await auto_clean(popped)
+    db[chat_id] = []
+    await remove_active_video_chat(chat_id)
+    await remove_active_chat(chat_id)
+    await set_loop(chat_id, 0)
+    
     async def change_stream(self, client, chat_id):
         check = db.get(chat_id)
         popped = None
@@ -404,4 +413,4 @@ class Call(PyTgCalls):
         async def stream_end_handler1(client: PyTgCalls, update: StreamEnded):
             await self.change_stream(client, update.chat_id)
 
-Istu = Call()
+Aaru = Call()
