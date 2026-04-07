@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from IstkharMusic import app
-from IstkharMusic.utils.formatters import (
+from MahiMusic import app
+from MahiMusic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
