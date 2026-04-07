@@ -2,13 +2,13 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.types import Message
 from strings import get_string, helpers
-from IstkharMusic import app
+from MahiMusic import app
 from pyrogram.types import InputMediaVideo
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import add_sudo, remove_sudo
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.extraction import extract_user
-from IstkharMusic.utils.inline import close_markup
+from MahiMusic.misc import SUDOERS
+from MahiMusic.utils.database import add_sudo, remove_sudo
+from MahiMusic.utils.decorators.language import language
+from MahiMusic.utils.extraction import extract_user
+from MahiMusic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
 
