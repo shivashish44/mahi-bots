@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.core.call import Istu
+from MahiMusic import app
+from MahiMusic.core.call import Aaru
 
 welcome = 20
 close = 30
