@@ -290,7 +290,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await PURVI.stream_call(url)
+                await MAHI.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -503,7 +503,7 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("IstumousAdmin") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("BetaAdmin") & ~BANNED_USERS)
 async def Istumous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
