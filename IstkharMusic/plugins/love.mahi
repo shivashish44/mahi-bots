@@ -1,0 +1,72 @@
+from pyrogram import filters
+import random
+from MahiMusic import app
+
+
+def get_random_message(love_percentage):
+    if love_percentage <= 30:
+        return random.choice([
+            "Love is in the air but needs a little spark.",
+            "A good start but there's room to grow.",
+            "It's just the beginning of something beautiful."
+        ])
+    elif love_percentage <= 70:
+        return random.choice([
+            "A strong connection is there. Keep nurturing it.",
+            "You've got a good chance. Work on it.",
+            "Love is blossoming, keep going."
+        ])
+    else:
+        return random.choice([
+            "Wow! It's a match made in heaven!",
+            "Perfect match! Cherish this bond.",
+            "Destined to be together. Congratulations!"
+        ])
+
+
+@app.on_message(filters.command("love", prefixes="/"))
+async def love_command(client, message):
+    command, *args = message.text.split(" ")
+    if len(args) >= 2:
+        name1 = args[0].strip()
+        name2 = args[1].strip()
+
+        love_percentage = random.randint(10, 100)
+        love_message = get_random_message(love_percentage)
+
+        response = f"{name1}💕 + {name2}💕 = {love_percentage}%\n\n{love_message}"
+    else:
+        response = "Please enter two names after /love command.\nExample: `/love Alice Bob`"
+
+    await message.reply_text(response)
+
+
+@app.on_message(filters.command(["couple", "couples"], prefixes="/") & filters.group)
+async def couple_command(client, message):
+    try:
+        status_msg = await message.reply_text("🪄 Finding the perfect couple...")
+        
+        members = []
+        # Fetch up to 100 recent chat members
+        async for member in client.get_chat_members(message.chat.id, limit=100):
+            if not member.user.is_bot and not member.user.is_deleted:
+                # Use first name, fallback to a default if None
+                name = member.user.first_name if member.user.first_name else "Mystery User"
+                members.append(name)
+
+        if len(members) < 2:
+            return await status_msg.edit_text("❌ Not enough human members in this group to form a couple!")
+
+        # Pick 2 random members
+        c1, c2 = random.sample(members, 2)
+        
+        response = (
+            "**🎊 Couple of the Day 🎊**\n\n"
+            f"👩‍❤️‍👨 **{c1}** 💕  **{c2}** 👩‍❤️‍👨\n\n"
+            "*Destined or random? We will never know!*"
+        )
+        
+        await status_msg.edit_text(response)
+        
+    except Exception as e:
+        await message.reply_text("❌ Couldn't fetch chat members. Ensure I have admin permissions to see members if they are hidden.")
