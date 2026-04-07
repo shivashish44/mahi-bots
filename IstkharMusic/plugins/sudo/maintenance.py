@@ -1,9 +1,9 @@
 from pyrogram import filters
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import (
+from MahiMusic import app
+from MahiMusic.misc import SUDOERS
+from MahiMusic.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
@@ -19,22 +19,30 @@ async def maintenance(client, message: Message):
         _ = get_string(language)
     except:
         _ = get_string("en")
+        
     usage = _["maint_1"]
+    
+    # The button containing your link
+    bot_link_markup = InlineKeyboardMarkup(
+        [[InlineKeyboardButton("🎵 MUSIC BOTS", url="https://t.me/betabot_hub/24")]]
+    )
+
     if len(message.command) != 2:
-        return await message.reply_text(usage)
+        return await message.reply_text(usage, reply_markup=bot_link_markup)
+        
     state = message.text.split(None, 1)[1].strip().lower()
+    
     if state == "enable":
         if await is_maintenance() is False:
-            await message.reply_text(_["maint_4"])
+            await message.reply_text(_["maint_4"], reply_markup=bot_link_markup)
         else:
             await maintenance_on()
-            await message.reply_text(_["maint_2"].format(app.mention))
+            await message.reply_text(_["maint_2"].format(app.mention), reply_markup=bot_link_markup)
     elif state == "disable":
         if await is_maintenance() is False:
             await maintenance_off()
-            await message.reply_text(_["maint_3"].format(app.mention))
+            await message.reply_text(_["maint_3"].format(app.mention), reply_markup=bot_link_markup)
         else:
-            await message.reply_text(_["maint_5"])
+            await message.reply_text(_["maint_5"], reply_markup=bot_link_markup)
     else:
-        await message.reply_text(usage)
-
+        await message.reply_text(usage, reply_markup=bot_link_markup)
