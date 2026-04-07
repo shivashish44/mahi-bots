@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import add_gban_user, remove_gban_user
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.extraction import extract_user
+from MahiMusic import app
+from MahiMusic.misc import SUDOERS
+from MahiMusic.utils.database import add_gban_user, remove_gban_user
+from MahiMusic.utils.decorators.language import language
+from MahiMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
