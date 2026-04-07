@@ -1,6 +1,6 @@
 import asyncio
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import get_active_chats, is_music_playing
+from MahiMusic.misc import db
+from MahiMusic.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():
