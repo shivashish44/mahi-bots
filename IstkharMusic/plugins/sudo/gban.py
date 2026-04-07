@@ -4,10 +4,10 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils import get_readable_time
-from IstkharMusic.utils.database import (
+from MahiMusic import app
+from MahiMusic.misc import SUDOERS
+from MahiMusic.utils import get_readable_time
+from MahiMusic.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -15,8 +15,8 @@ from IstkharMusic.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.extraction import extract_user
+from MahiMusic.utils.decorators.language import language
+from MahiMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
