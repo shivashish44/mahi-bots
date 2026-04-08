@@ -1,18 +1,20 @@
 import os
+
 from ..logging import LOGGER
 
-BASE_DIR = os.getcwd()
-DOWNLOAD_DIR = os.path.join(BASE_DIR, "downloads")
-COUPLE_DIR = os.path.join(BASE_DIR, "couples")
-CACHE_DIR = os.path.join(BASE_DIR, "cache")
 
 def dirr():
     for file in os.listdir():
-        if file.lower().endswith((".jpg", ".jpeg", ".png")):
+        if file.endswith(".jpg"):
+            os.remove(file)
+        elif file.endswith(".jpeg"):
+            os.remove(file)
+        elif file.endswith(".png"):
             os.remove(file)
 
-    os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-    os.makedirs(CACHE_DIR, exist_ok=True)
-    os.makedirs(COUPLE_DIR, exist_ok=True)
+    if "downloads" not in os.listdir():
+        os.mkdir("downloads")
+    if "cache" not in os.listdir():
+        os.mkdir("cache")
 
-    LOGGER(__name__).info("Directories Updated.")
+    LOGGER(__name__).info("» ᴅɪʀᴇᴄᴛᴏʀɪᴇs ᴜᴘᴅᴀᴛᴇᴅ.")
